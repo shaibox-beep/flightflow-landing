@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlightFlow</title>
+<style>
+  :root{
+    --ground:#56544d;        /* warm dark grey from the logo */
+    --ground-2:#4d4b45;
+    --paper:#f4f3ef;         /* warm off-white */
+    --paper-soft:#cfccc2;
+    --line:rgba(244,243,239,.16);
+    --slash:#e8a03c;         /* warm amber accent for the slash */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--ground);
+    color:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;flex-direction:column;
+  }
+  .wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 30px}
+
+  header{display:flex;align-items:center;justify-content:space-between;padding:30px 0}
+  .logo{font-size:23px;font-weight:700;letter-spacing:-.01em}
+  .logo .sl{color:var(--slash)}
+  nav a{color:var(--paper-soft);text-decoration:none;font-size:15px;margin-left:28px;transition:color .2s}
+  nav a:hover{color:var(--paper)}
+
+  main{flex:1}
+
+  .hero{padding:96px 0 100px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    color:var(--paper-soft);font-weight:600;font-size:13px;
+    letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px;
+  }
+  h1{
+    font-size:52px;line-height:1.08;letter-spacing:-.025em;font-weight:700;
+    max-width:16ch;margin-bottom:26px;
+  }
+  h1 .sl{color:var(--slash)}
+  .lede{font-size:20px;color:var(--paper-soft);max-width:54ch}
+
+  .vmv{padding:84px 0 96px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .card{padding:0}
+  .card h2{
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--slash);margin-bottom:14px;font-weight:700;
+  }
+  .card h2::before{content:"/ "}
+  .card p{font-size:15.5px;line-height:1.6;color:var(--paper-soft)}
+
+  footer{
+    border-top:1px solid var(--line);padding:34px 0;
+    display:flex;align-items:center;justify-content:space-between;
+    color:var(--paper-soft);font-size:14px;
+  }
+  footer a{color:var(--paper);text-decoration:none}
+  footer a:hover{color:var(--slash)}
+
+  @media(max-width:760px){
+    h1{font-size:36px}
+    .lede{font-size:18px}
+    .grid{grid-template-columns:1fr}
+    nav{display:none}
+    .hero{padding:64px 0 68px}
+    .vmv{padding:56px 0 64px}
+  }
+</style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="logo">FlightFlow/</div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">Aviation Operations Software</div>
+      <h1>Smarter operations for small airlines and private jet operators<span class="sl">.</span></h1>
+      <p class="lede">FlightFlow develops tools tailored to each small airline and private jet operator. Your requirements, your flows, your business and operational challenges. Built by people who fly the line.</p>
+    </section>
+
+    <section class="vmv wrap" id="about">
+      <div class="grid">
+        <div class="card">
+          <h2>Vision</h2>
+          <p>A world where small airlines and jet operators no longer bend their operations to fit generic software, where every company runs on tools built for exactly how it works.</p>
+        </div>
+        <div class="card">
+          <h2>Mission</h2>
+          <p>Help small airlines and private jet operators run on tailored software, so they can focus on growing the business and maximizing profit safely, instead of wrestling with operational friction.</p>
+        </div>
+        <div class="card">
+          <h2>Approach</h2>
+          <p>We start with your operation, not a template. From the ground up, we build for how things actually run.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 FlightFlow</span>
+  </footer>
+</body>
+</html>
