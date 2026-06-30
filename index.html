@@ -24,9 +24,12 @@
     min-height:100vh;
     display:flex;flex-direction:column;
   }
-  .wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 30px}
+  .wrap{width:100%;max-width:1060px;margin:0 auto;
+    padding-left:max(44px,env(safe-area-inset-left));
+    padding-right:max(44px,env(safe-area-inset-right))}
 
-  header{display:flex;align-items:center;justify-content:space-between;padding-top:30px;padding-bottom:30px}
+  header{display:flex;align-items:center;justify-content:space-between;
+    padding-top:max(44px,env(safe-area-inset-top));padding-bottom:30px}
   .logo{font-size:23px;font-weight:700;letter-spacing:-.01em}
   .logo .sl{color:var(--slash)}
   nav a{color:var(--paper-soft);text-decoration:none;font-size:15px;margin-left:28px;transition:color .2s}
@@ -34,7 +37,7 @@
 
   main{flex:1}
 
-  .hero{padding-top:96px;padding-bottom:100px;border-bottom:1px solid var(--line)}
+  .hero{padding-top:52px;padding-bottom:100px;border-bottom:1px solid var(--line)}
   .eyebrow{
     color:var(--paper-soft);font-weight:600;font-size:13px;
     letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px;
@@ -45,6 +48,7 @@
   }
   h1 .sl{color:var(--slash)}
   .lede{font-size:20px;color:var(--paper-soft);max-width:54ch}
+  .lede .sl{color:var(--slash)}
 
   .vmv{padding-top:84px;padding-bottom:96px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
@@ -53,7 +57,7 @@
     font-size:12px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--slash);margin-bottom:14px;font-weight:700;
   }
-  .card h2::before{content:"/ "}
+  .card h2::before{content:"/ ";color:var(--paper)}
   .card p{font-size:15.5px;line-height:1.6;color:var(--paper-soft)}
 
   footer{
@@ -65,13 +69,14 @@
   footer a:hover{color:var(--slash)}
 
   @media(max-width:760px){
-    .wrap{padding:0 24px}
+    .wrap{padding-left:max(26px,env(safe-area-inset-left));
+      padding-right:max(26px,env(safe-area-inset-right))}
     h1{font-size:36px}
     .lede{font-size:18px}
     .grid{grid-template-columns:1fr}
     nav{display:none}
-    header{padding-top:48px}
-    .hero{padding-top:64px;padding-bottom:68px}
+    header{padding-top:max(52px,env(safe-area-inset-top))}
+    .hero{padding-top:40px;padding-bottom:68px}
     .vmv{padding-top:56px;padding-bottom:64px}
   }
 </style>
@@ -83,9 +88,8 @@
 
   <main>
     <section class="hero wrap">
-      <div class="eyebrow">Aviation Operations Software</div>
-      <h1>Smarter operations for small airlines and private jet operators<span class="sl">.</span></h1>
-      <p class="lede">FlightFlow develops tools tailored to each small airline and private jet operator. Your requirements, your flows, your business and operational challenges. Built by people who fly the line.</p>
+      <h1><span class="sl">Custom-made</span> software for small airlines and private jet operators<span class="sl">.</span></h1>
+      <p class="lede">FlightFlow develops tools tailored to each small airline and private jet operator. Your requirements, your flows, your business and operational challenges. <span class="sl">Built by people who fly the line.</span></p>
     </section>
 
     <section class="vmv wrap" id="about">
@@ -100,7 +104,7 @@
         </div>
         <div class="card">
           <h2>Approach</h2>
-          <p>We start with your operation, not a template. From the ground up, we build for how things actually run.</p>
+          <p>We are active commercial pilots. Not just developers. We start with your operation, not a template. From the ground up, we build around how things actually run.</p>
         </div>
       </div>
     </section>
